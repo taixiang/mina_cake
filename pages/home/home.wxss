@@ -14,3 +14,14 @@
    flex-direction: column;
    padding: 2%
 }
+.bottom{
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  color: grey;
+  font-size: 28rpx;
+  padding-top: 10px
+}
+.price{
+  color: #ff0000
+}

@@ -42,13 +42,6 @@ Page({
         }
       })
     }
-
-    // wx.request({
-    //   url: 'http://127.0.0.1:8000/cake/category_json/?page=2',
-    //   success:function(res){
-    //     console.log(res)
-    //   }
-    // })
   },
   
   getUserInfo: function(e) {

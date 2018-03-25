@@ -1,11 +1,12 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/detail/detail",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "满街香蛋糕",
     "navigationBarTextStyle":"black"

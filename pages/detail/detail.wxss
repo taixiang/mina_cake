@@ -1,0 +1,18 @@
+.detail{
+  padding-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 30rpx;
+}
+.price{
+  color: #ff0000;
+  border-bottom: 1px solid #e9e9e9;
+  padding: 10px
+}
+.line{
+ border-bottom: 1px solid #e9e9e9;
+ padding: 10px
+}
+.desc{
+  padding: 10px
+}
