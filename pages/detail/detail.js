@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    detail:null
+    detail: null,
+    isImg2: false,
+    isImg3: false
   },
 
   /**
@@ -14,56 +16,56 @@ Page({
    */
   onLoad: function (options) {
     console.log(options)
-    getData(this,options.id)
+    getData(this, options.id)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+
   }
 })
 
@@ -79,9 +81,11 @@ function getData(that, id) {
       console.log("====成功")
       // console.log(res)
       if (res.data != null && res.data.code == 200) {
-         that.setData({
-            detail:res.data.results
-         })
+        that.setData({
+          detail: res.data.results,
+          isImg2: res.data.results.img2.indexOf("blank.jpg") >= 0 ? false : true,
+          isImg3: res.data.results.img3.indexOf("blank.jpg") >= 0 ? false : true
+        })
       }
 
     },
@@ -90,7 +94,7 @@ function getData(that, id) {
       // console.log(res)
     },
     complete: function (res) {
-      
+
     }
   })
 }

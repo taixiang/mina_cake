@@ -1,13 +1,25 @@
-<view class='detail'>
-  <text class="{{detail.name.length>0?'line':''}}">{{detail.name.length > 0?detail.name:""}}</text>
-  <text class="{{detail.code.length>0?'line':''}}">{{detail.code.length > 0?"编号："+detail.code:""}}</text>
-  <text class="{{detail.price>0?'price':''}}">{{detail.price>0?"价格：￥"+detail.price:""}}</text>
-  <text class="{{detail.size.length>0?'line':''}}">{{detail.size.length > 0?"尺寸："+detail.size+"寸":""}}</text>
-  <text class="{{detail.label.length>0?'line':''}}">{{detail.label.length > 0?detail.label:""}}</text>
-  <text class='desc'>{{detail.desc.length > 0?detail.desc:""}}</text>
+<view class='con'>
 
-  <image src='{{detail.img1}}' mode='aspectFit' style='margin-top:10px'></image>
-  <image src='{{detail.img2}}' mode='aspectFit' style='margin-top:10px'></image>
-  <image src='{{detail.img3}}' mode='aspectFit' style='margin-top:10px'></image>
+
+  <scroll-view scroll-y class='detail'>
+    <text class="{{detail.name.length>0?'line':''}}">{{detail.name.length > 0?detail.name:""}}</text>
+    <text class="{{detail.code.length>0?'line':''}}">{{detail.code.length > 0?"编号："+detail.code:""}}</text>
+    <text class="{{detail.price>0?'price':''}}">{{detail.price>0?"价格：￥"+detail.price:""}}</text>
+    <text class="{{detail.size.length>0?'line':''}}">{{detail.size.length > 0?"尺寸："+detail.size+"寸":""}}</text>
+    <text class="{{detail.label.length>0?'line':''}}">{{detail.label.length > 0?detail.label:""}}</text>
+    <text class='desc'>{{detail.desc.length > 0?detail.desc:""}}</text>
+
+    <view class='img'>
+      <image src='{{detail.img1}}' mode='aspectFit' style='margin-top:10px'></image>
+      <view wx:if="{{isImg2}}">
+        <image src='{{detail.img2}}' mode='aspectFit' style='margin-top:10px'></image>
+      </view>
+      <view wx:if="{{isImg3}}">
+        <image src='{{detail.img3}}' mode='aspectFit' style='margin-top:10px'></image>
+      </view>
+
+    </view>
+
+  </scroll-view>
 
 </view>
